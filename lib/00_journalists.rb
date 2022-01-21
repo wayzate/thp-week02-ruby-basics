@@ -13,7 +13,7 @@ puts handles.select{ |handle| handle.length == 6}.length
 puts
 
 puts "=== Combien commencent par une majuscule (première lettre juste après le @) ?"
-puts handles.select{ |handle| handle[1].upcase == handle[1]}.length
+puts handles.count{ |handle| handle[1].match?(/[[:upper:]]/)}
 puts
 
 puts "=== Trie la liste de handle par ordre alphabétique."
